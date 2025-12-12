@@ -3,7 +3,7 @@
 ANTI-MONEY LAUNDERING (AML) DETECTION MODEL - FINAL DOCUMENTATION
 ================================================================================
 
-Date: 2025-12-08 22:23:29
+Date: 2025-12-13 00:41:08
 
 1. MODEL SELECTION
    Selected Model: XGBoost
@@ -15,34 +15,34 @@ Date: 2025-12-08 22:23:29
    - Acceptable precision to minimize false alarms
 
 2. MODEL PERFORMANCE
-   Optimal Threshold: 0.7000
+   Optimal Threshold: 0.7500
    
    Metrics on Test Set:
-   - Accuracy:  0.9480
-   - Precision: 0.8616
-   - Recall:    0.8197 (PRIMARY METRIC)
-   - F1 Score:  0.8402
-   - ROC-AUC:   0.9656
+   - Accuracy:  0.9477
+   - Precision: 0.8731
+   - Recall:    0.7953 (PRIMARY METRIC)
+   - F1 Score:  0.8324
+   - ROC-AUC:   0.9663
    
    Confusion Matrix:
-   - True Negatives:  9,613
-   - False Positives: 260
-   - False Negatives: 356
-   - True Positives:  1,619
+   - True Negatives:  9,622
+   - False Positives: 222
+   - False Negatives: 393
+   - True Positives:  1,527
 
 3. TRAINING DATA
-   - Total samples: 59,238
-   - Training samples: 47,390
-   - Test samples: 11,848
+   - Total samples: 58,817
+   - Training samples: 47,053
+   - Test samples: 11,764
    - Number of features: 82
    - Class imbalance handled: Yes (using class weighting/scaling)
 
 4. KEY FEATURES (Top 5)
-   82. number_transactions: 0.3742
-   29. Received_currency_UK pounds: 0.1078
-   81. num_incoming: 0.0414
-   73. Payment_type_Cross-border: 0.0376
-   80. total_incoming: 0.0294
+   82. number_transactions: 0.3731
+   29. Received_currency_UK pounds: 0.0967
+   81. num_incoming: 0.0428
+   73. Payment_type_Cross-border: 0.0364
+   80. total_incoming: 0.0303
 
 5. MODEL USAGE
    Files Saved:
@@ -67,9 +67,9 @@ Date: 2025-12-08 22:23:29
    - Model complexity: Balanced - XGBoost provides good interpretability
    
    Business Impact:
-   - Recall of 81.97% means we catch 81.97% of fraud cases
-   - Precision of 86.16% means 86.16% of alerts are true fraud
-   - False positive rate: 2.63% of legitimate transactions flagged
+   - Recall of 79.53% means we catch 79.53% of fraud cases
+   - Precision of 87.31% means 87.31% of alerts are true fraud
+   - False positive rate: 2.26% of legitimate transactions flagged
 
 7. RECOMMENDATIONS FOR DEPLOYMENT
    - Use this model for automated screening of transactions

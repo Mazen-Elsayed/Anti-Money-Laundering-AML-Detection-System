@@ -1,8 +1,8 @@
 {
     "model_name": "XGBoost",
     "model_type": "XGBClassifier",
-    "training_date": "2025-12-08 22:23:28",
-    "optimal_threshold": 0.7000000000000002,
+    "training_date": "2025-12-13 00:41:08",
+    "optimal_threshold": 0.7500000000000002,
     "num_features": 82,
     "feature_names": [
         "Time",
@@ -89,20 +89,20 @@
         "number_transactions"
     ],
     "target_column": "Is_laundering",
-    "training_samples": 47390,
-    "test_samples": 11848,
+    "training_samples": 47053,
+    "test_samples": 11764,
     "performance_metrics": {
-        "accuracy": 0.9480081026333559,
-        "precision": 0.8616285258116019,
-        "recall": 0.819746835443038,
-        "f1_score": 0.8401660612350804,
-        "roc_auc": 0.965552542607572
+        "accuracy": 0.9477218633117988,
+        "precision": 0.8730703259005146,
+        "recall": 0.7953125,
+        "f1_score": 0.8323793949304987,
+        "roc_auc": 0.9662884223046185
     },
     "confusion_matrix": {
-        "true_negatives": 9613,
-        "false_positives": 260,
-        "false_negatives": 356,
-        "true_positives": 1619
+        "true_negatives": 9622,
+        "false_positives": 222,
+        "false_negatives": 393,
+        "true_positives": 1527
     },
     "model_parameters": {
         "objective": "binary:logistic",
@@ -139,7 +139,7 @@
         "reg_alpha": null,
         "reg_lambda": null,
         "sampling_method": null,
-        "scale_pos_weight": 5.000253228665485,
+        "scale_pos_weight": 5.128288616827299,
         "subsample": null,
         "tree_method": null,
         "validate_parameters": null,
@@ -148,43 +148,43 @@
     "top_features": [
         {
             "Feature": "number_transactions",
-            "Importance": 0.37420377135276794
+            "Importance": 0.3730813264846802
         },
         {
             "Feature": "Received_currency_UK pounds",
-            "Importance": 0.10777608305215836
+            "Importance": 0.09672268480062485
         },
         {
             "Feature": "num_incoming",
-            "Importance": 0.041395336389541626
+            "Importance": 0.04281136021018028
         },
         {
             "Feature": "Payment_type_Cross-border",
-            "Importance": 0.03760579973459244
+            "Importance": 0.036430589854717255
         },
         {
             "Feature": "total_incoming",
-            "Importance": 0.029426395893096924
+            "Importance": 0.03026915341615677
         },
         {
             "Feature": "Payment_currency_UK pounds",
-            "Importance": 0.023437736555933952
+            "Importance": 0.026335906237363815
         },
         {
             "Feature": "Amount",
-            "Importance": 0.021657023578882217
+            "Importance": 0.022309716790914536
         },
         {
             "Feature": "Payment_type_Cash Deposit",
-            "Importance": 0.021110348403453827
-        },
-        {
-            "Feature": "total_outgoing",
-            "Importance": 0.0192071795463562
+            "Importance": 0.022114453837275505
         },
         {
             "Feature": "Receiver_bank_location_UK",
-            "Importance": 0.013460406102240086
+            "Importance": 0.021469732746481895
+        },
+        {
+            "Feature": "total_outgoing",
+            "Importance": 0.019881945103406906
         }
     ]
 }
